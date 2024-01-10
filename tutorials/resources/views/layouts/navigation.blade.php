@@ -27,6 +27,8 @@
                             <div>
                                 @if (Auth::check())
                                     {{ Auth::user()->name }}
+                                @else
+                                    gest
                                 @endif
                             </div>
                             
@@ -84,12 +86,16 @@
                 <div class="font-medium text-base text-gray-800">
                     @if (Auth::check())
                         {{ Auth::user()->name }}
+                    @else
+                        gest
                     @endif
                 </div>
                 {{-- <div class="font-medium text-sm text-gray-500">{{ Auth::user()->email }}</div> --}}
                 <div class="font-medium text-sm text-gray-500">
                 @if (Auth::check())
                     {{ Auth::user()->email }}
+                @else
+                    gest
                 @endif
                 </div>
             </div>
